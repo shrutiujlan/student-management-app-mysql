@@ -1,7 +1,7 @@
 version: '3.9'
 
 networks:
-    network-shruti:
+    shruti-network-kt:
         external: true
 
 services: 
@@ -14,7 +14,7 @@ services:
     ports:
       - 3308:3306
     networks:
-      - network-shruti
+      - shruti-network-kt
     volumes:
       - ./volume-shruti:/var/lib/mysql
 
@@ -29,9 +29,9 @@ services:
       - MYSQL_HOST=mysqlshrutidb
       - MYSQL_USER=root
       - MYSQL_PASSWORD=password
-      - MYSQL_PORT=3308
+      - MYSQL_PORT=3306
     networks:
-      - network-shruti
+      - shruti-network-kt
     volumes:
       - ./volume-shruti:/var/lib/mysql
 
