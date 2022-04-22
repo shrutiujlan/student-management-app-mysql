@@ -1,0 +1,36 @@
+version:'3.9'
+
+services:
+
+  mysqlshrutidb:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=practice
+      - MYSQL_ROOT PASSWORD password
+    ports:
+      - 3308:3306
+    networks:
+      - network-shruti
+    volumes:
+      - type: volume
+        source: volume
+        target: /var/lib/mysql
+
+  kt-project:
+    image: shruti-poc
+    restart: on-failure
+    depends on:
+      - mysqlshrutidb
+      - 8082:8080
+    environment:
+      - MYSQL_HOST=mysqlshrutidb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_PORT=3308
+    networks:
+      - network-shruti
+    volumes:
+      - type: volume
+        source: volume
+        target: /var/lib/mysql
+
