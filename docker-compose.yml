@@ -12,7 +12,7 @@ services:
     networks:
       - network-shruti
     volumes:
-       volume-shruti:/var/lib/mysql
+      - volume-shruti:/var/lib/mysql
 
   kt-project:
     image: shruti-poc
@@ -29,5 +29,5 @@ services:
     networks:
       - network-shruti
     volumes:
-       volume-shruti:/var/lib/mysql
+      - volume-shruti:/var/lib/mysql
 
