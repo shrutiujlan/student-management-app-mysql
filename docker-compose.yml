@@ -29,7 +29,7 @@ services:
       - MYSQL_HOST=mysqlshrutidb
       - MYSQL_USER=root
       - MYSQL_PASSWORD=password
-      - MYSQL_PORT=3306
+      - MYSQL_PORT=3308
     networks:
       - shruti-network-kt
     volumes:
