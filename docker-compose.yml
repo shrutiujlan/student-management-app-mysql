@@ -19,7 +19,7 @@ services:
   kt-project:
     image: shruti-poc
     restart: on-failure
-    depends on:
+    depends_on:
       - mysqlshrutidb
       - 8082:8080
     environment:
