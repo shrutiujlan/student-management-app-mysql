@@ -13,7 +13,7 @@ services:
       - network-shruti
     volumes:
       - type: volume
-        source: volume
+        source: volume-shruti
         target: /var/lib/mysql
 
   kt-project:
@@ -32,6 +32,6 @@ services:
       - network-shruti
     volumes:
       - type: volume
-        source: volume
+        source: volume-shruti
         target: /var/lib/mysql
 
